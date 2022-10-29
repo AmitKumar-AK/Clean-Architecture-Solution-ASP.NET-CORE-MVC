@@ -1,0 +1,100 @@
+﻿@model OpenAQAir.Domain.Entities.CountryResponse
+
+<div>
+    <div>
+        @if (Model != null && Model.Results.Count() > 0)
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Code</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Locations</th>
+                        <th scope="col">Count</th>
+                        <th scope="col">Cities</th>
+                        <th scope="col">Parameters</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Results)
+                    {
+                        <tr>
+                            <td>
+                            <span>
+                                <img style="width: 30px; height: 30px; margin-bottom: 3px;" src='https://cdn.jsdelivr.net/gh/hampusborgos/country-flags@main/svg/@(item.Code.ToLower()).svg' title="@item.Code" />
+                            </span>
+                            @item.Code</td>
+                            <td>@item.Name</td>
+                            <td>@item.Locations</td>
+                            <td>@item.Count</td>
+                            <td>@item.Cities</td>
+                            <td>
+                                @foreach (var str in item.Parameters)
+                                {
+                                    <div>@str</div>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="alert alert-dark no-Record" role="alert">
+                No Record Found!
+            </div>
+        }
+
+    </div>
+    <div>
+        @if (Model != null && Model.Results.Count() > 0)
+        {
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    @if (!Model.HasPrevious)
+                    {
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><span aria-hidden="true">&laquo;</span></a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="page-item">
+                            <a class="page-link" onclick="getCountryData('@Model.PreviousPageNumber')"  aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    }
+                    @for (int i = 1; i <= Model.TotalPages; i++)
+                    {
+                        if (i == Model.CurrentPage)
+                        {
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" onclick="javascript:void(0)">@i <span class="sr-only">(current)</span></a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="page-item"><a class="page-link" onclick="getCountryData('@i')" >@i</a></li>
+                        }
+                    }
+                    @if (!Model.HasNext)
+                    {
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><span aria-hidden="true">&raquo;</span></a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="page-item">
+                            <a class="page-link" onclick="getCountryData('@Model.NextPageNumber')" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        }
+    </div>
+</div>

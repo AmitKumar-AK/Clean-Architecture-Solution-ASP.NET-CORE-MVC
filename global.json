@@ -1,0 +1,6 @@
+{
+  "sdk": {
+    "version": "net5.0",
+    "rollForward": "latestMajor"
+  }
+}

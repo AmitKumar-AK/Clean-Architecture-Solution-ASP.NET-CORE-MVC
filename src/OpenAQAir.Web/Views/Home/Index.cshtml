@@ -1,0 +1,58 @@
+﻿@model OpenAQAir.Domain.Entities.CityResponse
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the OpenAQ Air Website</h1>
+    <p>Learn more about <a href="https://docs.openaq.org/docs/introduction" target="_blank">OpenAQ Air API</a>.</p>
+</div>
+
+<div class="all-Forms">
+    <div class="all-Options-Btn" style="margin-bottom:10px;">
+        <button type="button" class="btn btn-secondary" onclick="showForm('city')">City Details</button>
+        <button type="button" class="btn btn-success" onclick="showForm('country')">Country Details</button>
+    </div>
+    <div class="city-Form oForm" style="display:none">
+        <div>
+            <div class="form-group">
+                <label for="txtCity">Enter City Name</label>
+                <input type="text" class="form-control" id="txtCity" aria-describedby="cityHelp" name="txtCity" placeholder="Enter city name">
+                <small id="cityHelp" class="form-text text-muted">For more cities separate it by a comma (',').</small>
+            </div>
+            <div class="form-group">
+                <label>Sort Order</label>
+                <select class="custom-select" id="slCitySortOrder" name="slCitySortOrder">
+                    <option value="" selected>Select Sort Order </option>
+                    <option value="asc">Ascending Order</option>
+                    <option value="desc">Descending Order</option>
+                </select>            
+            </div>
+            <button type="submit" id="btnCityData" name="btnCityData" onclick='getCityData()' class="btn btn-primary">Get City Details</button>
+        </div>
+        <div id="divCityDetails" style="margin-top:10px">
+        </div>
+    </div>
+    <div class="country-Form oForm" style="display:none">
+        <div>
+            <div class="form-group">
+                <label for="txtCity">Enter Country Name</label>
+                <input type="text" class="form-control" id="txtCountry" aria-describedby="countryHelp" name="txtCountry" placeholder="Enter country name">
+                <small id="countryHelp" class="form-text text-muted">For more countries separate it by a comma (',').</small>
+            </div>
+            <div class="form-group">
+                <label>Sort Order</label>
+                <select class="custom-select" id="slCountrySortOrder" name="slCountrySortOrder">
+                    <option value="" selected>Select Sort Order </option>
+                    <option value="asc">Ascending Order</option>
+                    <option value="desc">Descending Order</option>
+                </select>
+            </div>
+
+            <button type="submit" id="btnCountryData" name="btnCountryData" onclick="getCountryData('1')" class="btn btn-primary">Get Country Details</button>
+        </div>
+        <div id="divCountryDetails" style="margin-top:10px">
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,48 @@
+﻿@model OpenAQAir.Domain.Entities.CityResponse
+
+
+   <div>
+        @if (Model != null && Model.Results.Count() > 0)
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Country</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Count</th>
+                        <th scope="col">Locations</th>
+                        <th scope="col">Parameters</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Results)
+                    {
+                        <tr>
+                            <td>
+                                <span>
+                                    <img style="width: 30px; height: 30px; margin-bottom: 3px;" src='https://cdn.jsdelivr.net/gh/hampusborgos/country-flags@main/svg/@(item.Country.ToLower()).svg' title="@item.Country" />
+                                </span>
+                                @item.Country
+                            </td>
+                            <td>@item.City</td>
+                            <td>@item.Count</td>
+                            <td>@item.Locations</td>
+                            <td>
+                                @foreach (var str in item.Parameters)
+                                {
+                                    <div>@str</div>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+            {
+                <div class="alert alert-dark no-Record" role="alert">
+                    No Record Found!
+                </div>
+            }
+
+    </div>
