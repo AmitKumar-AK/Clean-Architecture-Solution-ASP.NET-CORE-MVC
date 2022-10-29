@@ -194,7 +194,7 @@ You can get the city details after entering the city name where the `first chara
 
 If you enter the city name like this lucknow, then you would not get any result.
 
-<img src="images/CleanArchitectureOpenAQ-API-GetSingleCity.png" title="Get Single City Details" alt="Get Single City Details"  width="50%" height="50%" />
+<img src="images/CleanArchitectureOpenAQ-API-GetSingleCity.png" title="Get Single City Details" alt="Get Single City Details" />
 
 ### Multiple Cities Details
 
@@ -206,11 +206,11 @@ If you enter the city name like this lucknow, then you would not get any result.
 
 #### Ascending Order
 
-<img src="images/CleanArchitectureOpenAQ-API-GetMultipleCities.png" title="Get Multiple Cities Details" alt="Get Multiple Cities Details" width="50%" height="50%" />
+<img src="images/CleanArchitectureOpenAQ-API-GetMultipleCities.png" title="Get Multiple Cities Details" alt="Get Multiple Cities Details" />
 
 #### Descending Order
 
-<img src="images/CleanArchitectureOpenAQ-API-GetMultipleCities-1.png" title="Get Multiple Cities Details" alt="Get Multiple Cities Details" width="50%" height="50%" />
+<img src="images/CleanArchitectureOpenAQ-API-GetMultipleCities-1.png" title="Get Multiple Cities Details" alt="Get Multiple Cities Details" />
 
 This option will use the OpenAQ Air [cities API](https://docs.openaq.org/reference/cities_get_v2_cities_get) to get the air quality of cities. [<img src="images/GoToTop.png" width="20px" height="20px" title="Go To Top" alt="Go To Top" />](#table-of-contents)
 
