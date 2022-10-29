@@ -16,6 +16,9 @@ The purpose of this code repository is to provide details about integration of [
   * [Architecture Overview](#architecture-overview)
   * [High Level Diagram](#high-level-diagram)
   * [Solution Explorer View](#solution-explorer-view)
+  * [Application Configurations](#application-configurations)
+  * [Application Cache](#application-cache)
+  * [Application Logging](#application-logging)
   * [City Based Details](#city-based-details)
     * [Single City Details](#single-city-details)
     * [Multiple Cities Details](#multiple-cities-details)
@@ -134,6 +137,38 @@ In this application i have divided 'Application Core' into two separate projects
 
  ## Solution Explorer View
   <img src="images/DotNetCore-CleanArchitecture-SolutionOverview.PNG" title=".NET Core Clean Architecture Solution Explorer View" alt=".NET Core Clean Architecture Solution Explorer View" width="50%" height="50%" />
+
+[<img src="images/GoToTop.png" width="20px" height="20px" title="Go To Top" alt="Go To Top" />](#table-of-contents)
+ ## Application Configurations
+In this application required configuration managed from OpenAQAir.Web/[appsettings.json](src/OpenAQAir.Web/appsettings.json) file:
+- OpenAQAir REST API End-point
+- Default Page Size for the OpenAQAir REST API
+- Log file path
+
+  <img src="images/Application-Configurations.PNG" title=".NET Core Clean Architecture Solution Configurations" alt=".NET Core Clean Architecture Solution Configurations" width="70%" height="70%" />
+
+
+[<img src="images/GoToTop.png" width="20px" height="20px" title="Go To Top" alt="Go To Top" />](#table-of-contents)
+
+ ## Application Cache
+In this application we are using In-Memory cache and following format being used to create the [Cache Key](src/OpenAQAir.Infrastructure/OpenAQAir/Extensions/CacheHelpers.cs):
+> items-{0}-{1}-{2}-{3}-{4}-{5}
+
+The duration of the cache key is 5 minutes and mentioned at [CacheHelpers.cs](src/OpenAQAir.Infrastructure/OpenAQAir/Extensions/CacheHelpers.cs).
+
+**To make above values dynamic, we can move these values to OpenAQAir.Web/[appsettings.json](src/OpenAQAir.Web/appsettings.json) file.**
+
+  <img src="images/Application-Cache.PNG" title=".NET Core Clean Architecture Solution Application Cache" alt=".NET Core Clean Architecture Solution Application Cache" width="70%" height="70%" />
+
+
+[<img src="images/GoToTop.png" width="20px" height="20px" title="Go To Top" alt="Go To Top" />](#table-of-contents)
+ ## Application Logging
+In this application we are using [Serilog](https://serilog.net/) which provides diagnostic logging to files.
+
+The Serilog configuration managed via OpenAQAir.Web/[appsettings.json](src/OpenAQAir.Web/appsettings.json) file
+
+You can check the section [Application Configurations](#application-configurations) for more details.
+
 
 [<img src="images/GoToTop.png" width="20px" height="20px" title="Go To Top" alt="Go To Top" />](#table-of-contents)
 
