@@ -19,6 +19,8 @@ The purpose of this code repository is to provide details about integration of [
   * [Application Configurations](#application-configurations)
   * [Application Cache](#application-cache)
   * [Application Logging](#application-logging)
+  * [Application Integrations](#application-integrations)
+    * [OpenAQ REST API](#openaq-rest-api)
   * [City Based Details](#city-based-details)
     * [Single City Details](#single-city-details)
     * [Multiple Cities Details](#multiple-cities-details)
@@ -168,6 +170,18 @@ In this application we are using [Serilog](https://serilog.net/) which provides 
 The Serilog configuration managed via OpenAQAir.Web/[appsettings.json](src/OpenAQAir.Web/appsettings.json) file
 
 You can check the section [Application Configurations](#application-configurations) for more details.
+
+[<img src="images/GoToTop.png" width="20px" height="20px" title="Go To Top" alt="Go To Top" />](#table-of-contents)
+
+## Application Integrations
+Please find below list of interation with the application:
+### OpenAQ REST API
+[OpenAQ](https://openaq.org/) is a non-profit organization empowering communities around the globe to clean their air by harmonizing, sharing, and using open air quality data.
+
+OpenAQ provides the REST API to access the [air quality data](https://docs.openaq.org/docs).
+
+In this applicaiton, we are using Country and City end-points to get the air quality related data over the HTTPS.
+
 
 
 [<img src="images/GoToTop.png" width="20px" height="20px" title="Go To Top" alt="Go To Top" />](#table-of-contents)
