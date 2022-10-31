@@ -1,9 +1,33 @@
+<!--
+*** This repo will provide details about the of OpenAQ API end points, Clean Architecture implementation using ASP.NET Core MVC web application, Dependency Inversion Principle,Repository Design Pattern and 
+Domain-Driven Design.
+*** Don't forget to give the project a star!
+-->
+
+
+[![GitHub license](https://img.shields.io/github/license/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC.svg?style=for-the-badge)](https://github.com/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC/blob/master/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC.svg?style=for-the-badge)](https://GitHub.com/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC/graphs/contributors/)
+[![GitHub issues](https://img.shields.io/github/issues/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC.svg?style=for-the-badge)](https://GitHub.com/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC/issues/)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC.svg?style=for-the-badge)](https://GitHub.com/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC/pulls/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
+[![GitHub Stars](https://img.shields.io/github/stars/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC?label=GitHub%20Stars&style=for-the-badge)](https://github.com/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC/stargazers)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FAmitKumar-AK%2FClean-Architecture-Solution-ASP.NET-CORE-MVC&label=Visitors&countColor=%23263759&style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC.svg?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC.svg?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC?style=for-the-badge)
+
+[![GitHub watchers](https://img.shields.io/github/watchers/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC/watchers/)
+[![GitHub forks](https://img.shields.io/github/forks/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC/network/)
+[![GitHub stars](https://img.shields.io/github/stars/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/amitkumar-ak/Clean-Architecture-Solution-ASP.NET-CORE-MVC/stargazers/)
 # OpenAQ API integration
 
 The purpose of this code repository is to provide details about integration of [OpenAQ API](https://docs.openaq.org/docs/introduction) end-points using ASP.NET Core.
 
+<!-- TABLE OF CONTENTS -->
 
-## Table Of Contents
+<details>
+  <summary> <span id="table-of-contents" style="font-size: 24px;font-weight: 600;"> Table of Contents</span> </summary>
+  
 - [Overview](#overview)
 - [Architectural Overview](#architectural-overview)
   * [Application's design patterns](#applications-design-patterns)
@@ -35,6 +59,8 @@ The purpose of this code repository is to provide details about integration of [
 - [Detailed section](#detailed-section)
   * [Clean Architecture](#clean-architecture)
 - [Credit / References](#credit--references)
+</details>
+<br/>
 
 # Overview
 The OpenAQ Air application is an ASP.NET CORE MVC based web application and it will do the integration with the OpenAQ Air REST API to get the `air quality data`.
@@ -224,6 +250,17 @@ In this applicaiton, we are using Country and City end-points to get the air qua
 
 [<img src="images/GoToTop.png" width="20px" height="20px" title="Go To Top" alt="Go To Top" />](#table-of-contents)
 
+## 🛠️ Technologies used
+<code><a title="HTML 5" href="https://www.w3.org/html/" target="_blank"><img height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"></a></code>
+<code><a title="JavaScript" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img height="30" src="https://camo.githubusercontent.com/288cace72126df58aaeaa75627898785885858d54b03cb15ea3353a515642204/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6e6f64656a732f6e6f64656a732d69636f6e2e737667"></a></code>
+<code><a title="Cascading Style Sheets" href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank"><img height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"></a></code>
+<code><a title="C# language" href="https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/" target="_blank"><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/csharp/csharp.png"></a></code>
+<code><a title="Microsoft .NET Core" href="https://learn.microsoft.com/en-us/dotnet/core/introduction" target="_blank"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg"></a></code>
+<code><a title="Git" href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="30" height="30"/> </a></code>
+<code><a title="Bootstrap" href="https://getbootstrap.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg"></a></code>
+
+
+<br/>
 
 
 # Application Functionalities
