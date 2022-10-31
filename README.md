@@ -1,6 +1,6 @@
 # OpenAQ API integration
 
-The purpose of this code repository is to provide details about integration of [OpenAQ API](https://docs.openaq.org/docs/introduction) end-points using ASP.NET Core using  [Clean Architecture](#clean-architecture).
+The purpose of this code repository is to provide details about integration of [OpenAQ API](https://docs.openaq.org/docs/introduction) end-points using ASP.NET Core.
 
 
 ## Table Of Contents
