@@ -34,7 +34,7 @@ The purpose of this code repository is to provide details about integration of [
     * [Multiple Countries Details](#multiple-countries-details)
 - [Detailed section](#detailed-section)
   * [Clean Architecture](#clean-architecture)
-- [Credit/References](#credit-references)
+- [Credit / References](#credit--references)
 
 # Overview
 The OpenAQ Air application is an ASP.NET CORE MVC based web application and it will do the integration with the OpenAQ Air REST API to get the `air quality data`.
@@ -358,7 +358,7 @@ This principles states that:
 
 [<img src="images/GoToTop.png" width="20px" height="20px" title="Go To Top" alt="Go To Top" />](#table-of-contents)  
 ---
-# Credit References
+# Credit / References
 - [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 - [Domain-Driven Design: What is it and how do you use it?](https://blog.airbrake.io/blog/software-design/domain-driven-design)
 - [S.O.L.I.D. Principles of Object-Oriented Programming in C#](https://www.educative.io/blog/solid-principles-oop-c-sharp)
