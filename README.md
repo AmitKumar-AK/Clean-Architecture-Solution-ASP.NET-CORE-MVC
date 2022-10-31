@@ -34,7 +34,7 @@ The purpose of this code repository is to provide details about integration of [
     * [Multiple Countries Details](#multiple-countries-details)
 - [Detailed section](#detailed-section)
   * [Clean Architecture](#clean-architecture)
-  * [Credit/References](#credit-references)
+- [Credit/References](#credit-references)
 
 # Overview
 The OpenAQ Air application is an ASP.NET CORE MVC based web application and it will do the integration with the OpenAQ Air REST API to get the `air quality data`.
@@ -71,7 +71,7 @@ In this application, i have divided 'Application Core' (from Clean Architecture)
 
 
 ## Application's design patterns
----
+
 <br/>
 
 ### Dependency Inversion Principle
@@ -147,7 +147,7 @@ Another benefit is that testing your controllers becomes easy because the testin
 
 
  ## Application Layers
- ---
+ 
   <img src="images/DotNetCore-CleanArch-Application-Layer.png" title=".NET Core Clean Architecture Application Layers" alt=".NET Core Clean Architecture Application Layers"  />
 
 [<img src="images/GoToTop.png" width="20px" height="20px" title="Go To Top" alt="Go To Top" />](#table-of-contents)
@@ -157,7 +157,7 @@ Another benefit is that testing your controllers becomes easy because the testin
 
 
  ## High Level Diagram
- ---
+ 
   <img src="images/DotNetCore-CleanArchitecture.png" title=".NET Core Clean Architecture Overview" alt=".NET Core Clean Architecture Overview"  />
 
 [<img src="images/GoToTop.png" width="20px" height="20px" title="Go To Top" alt="Go To Top" />](#table-of-contents)
@@ -165,7 +165,7 @@ Another benefit is that testing your controllers becomes easy because the testin
 
 
  ## Solution Explorer View
- ---
+ 
   <img src="images/DotNetCore-CleanArchitecture-SolutionOverview.PNG" title=".NET Core Clean Architecture Solution Explorer View" alt=".NET Core Clean Architecture Solution Explorer View" width="50%" height="50%" />
 
 [<img src="images/GoToTop.png" width="20px" height="20px" title="Go To Top" alt="Go To Top" />](#table-of-contents)
@@ -213,7 +213,7 @@ You can check the section [Application Configurations](#application-configuratio
 
 Please find below list of interation with the application:
 ## OpenAQ REST API
----
+
 [OpenAQ](https://openaq.org/) is a non-profit organization empowering communities around the globe to clean their air by harmonizing, sharing, and using open air quality data.
 
 OpenAQ provides the REST API to access the [air quality data](https://docs.openaq.org/docs).
@@ -231,7 +231,7 @@ In this applicaiton, we are using Country and City end-points to get the air qua
 As explained above, this application uses the OpenAQ Air REST API and provides following functionalities based on this:
 
  ## City Based Details
- ---
+ 
 User can get the air quality details of `Single` or `Multiple` cities separated by comma (',').
 
 <br/>
@@ -276,7 +276,7 @@ This option will use the OpenAQ Air [cities API](https://docs.openaq.org/referen
 
 
  ## Country based detail
- ---
+ 
 User can get the air quality details of `Single` or `Multiple` countries separated by comma (',').
 
 <br/>
@@ -341,7 +341,7 @@ This option will use the OpenAQ Air [Country API](https://docs.openaq.org/refere
 
 # Detailed section
 ## Clean Architecture
----
+
 Applications that follow the [Dependency Inversion Principle](https://deviq.com/principles/dependency-inversion-principle) as well as the [Domain-Driven Design (DDD) principles](https://verraes.net/2021/09/what-is-domain-driven-design-ddd/) tend to arrive at a similar architecture.
 
 This architecture has gone by many names over the years. One of the first names was Hexagonal Architecture, followed by Ports-and-Adapters. More recently, it's been cited as the [Onion Architecture](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) or [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html). The latter name, Clean Architecture, is used now mostly.
