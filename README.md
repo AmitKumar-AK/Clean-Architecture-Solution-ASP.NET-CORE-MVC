@@ -176,6 +176,8 @@ Another benefit is that testing your controllers becomes easy because the testin
  
   <img src="images/DotNetCore-CleanArch-Application-Layer.png" title=".NET Core Clean Architecture Application Layers" alt=".NET Core Clean Architecture Application Layers"  />
 
+> # We can also introduce WEB API to implement Service Layer which provides benifits like Interoperability, Abstraction, Reusability, Support of multiple client types, Scalability and High Availability.
+
 [<img src="images/GoToTop.png" width="20px" height="20px" title="Go To Top" alt="Go To Top" />](#table-of-contents)
 
 <br/>
