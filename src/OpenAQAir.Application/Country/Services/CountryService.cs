@@ -1,4 +1,5 @@
 ﻿using OpenAQAir.Application.Country.Interfaces;
+using OpenAQAir.Application.Country.Queries;
 using OpenAQAir.Domain.Entities;
 using OpenAQAir.Domain.Interfaces;
 
@@ -20,6 +21,12 @@ namespace OpenAQAir.Application.Country.Services
     public Output GetCountries(CountryQuery query)
     {
       var response = _countryRepository.GetCountries(query);
+      return response;
+    }
+
+    public Task<CountryResponse> GetCountriesAsync(CountryQuery query)
+    {
+      var response = _countryRepository.GetCountriesAsync(query);
       return response;
     }
 

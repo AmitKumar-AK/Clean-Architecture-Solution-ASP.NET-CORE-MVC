@@ -68,6 +68,28 @@ namespace OpenAQAir.Infrastructure.OpenAQAir.Repositories
       return results.Result;
     }
 
+    public Task<CityResponse> GetCitiesAsync(CityQuery query)
+    {
+      _logger.LogInformation("Infrastructure => GetCities :: Start");
+      GetAPIParameter(ref query);
+      if (string.IsNullOrEmpty(query.Keyword))
+      {
+        _logger.LogError("Keyword is empty");
+        throw new ArgumentNullException(nameof(query));
+      }
+
+      var results = _cache.GetOrCreate(
+        CacheHelpers.GenerateItemCacheKey("city", query.PageSize, query.PageNumber, query.Keyword, query.SortOrder),
+        cacheEntry =>
+        {
+          cacheEntry.SlidingExpiration = CacheHelpers.DefaultCacheDuration;
+          return GetCitiesFromAPIAsync(query);
+        });
+      _logger.LogInformation("Infrastructure => GetCities :: End");
+
+      return results;
+    }
+
     /// <summary>
     /// This function from Infrastructure layer Build the API url for the City.
     /// </summary>

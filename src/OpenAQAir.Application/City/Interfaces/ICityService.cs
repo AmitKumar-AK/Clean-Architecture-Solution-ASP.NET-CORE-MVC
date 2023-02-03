@@ -6,5 +6,7 @@ namespace OpenAQAir.Application.City.Interfaces
   {
     public Output GetCities();
     public Output GetCities(CityQuery query);
+
+    public Task<CityResponse> GetCitiesAsync(CityQuery query);
   }
 }

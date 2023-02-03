@@ -29,5 +29,11 @@ namespace OpenAQAir.Application.City.Services
       return response;
     }
 
+    public Task<CityResponse> GetCitiesAsync(CityQuery query)
+    {
+      var response = _cityRepository.GetCitiesAsync(query);
+      return response;
+    }
+
   }
 }

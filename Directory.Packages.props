@@ -49,5 +49,9 @@
                     Version="3.3.0" />
     <PackageVersion Include="Serilog.Extensions.Logging.File"
                       Version="3.0.0" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerGen"
+                    Version="6.5.0" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerUI"
+                    Version="6.5.0" />    
   </ItemGroup>
 </Project>

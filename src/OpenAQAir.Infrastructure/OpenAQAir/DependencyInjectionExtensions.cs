@@ -1,7 +1,10 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using System.Reflection;
+using MediatR;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OpenAQAir.Application.City.Interfaces;
 using OpenAQAir.Application.City.Services;
+using OpenAQAir.Application.Common.Behaviours;
 using OpenAQAir.Application.Country.Interfaces;
 using OpenAQAir.Application.Country.Services;
 using OpenAQAir.Domain.Interfaces;
@@ -32,6 +35,14 @@ namespace OpenAQAir.Infrastructure.OpenAQAir
       //Core Interfaces | Infrastructure Repositories
       services.AddScoped<ICityRepository, CityRepository>();
       services.AddScoped<ICountryRepository, CountryRepository>();
+
+      services.AddAutoMapper(Assembly.GetExecutingAssembly());
+      services.AddMediatR(Assembly.GetExecutingAssembly());
+      services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
+
+      //--Register Interface from Application Layer and its implementation from Infrastructure Layer
+      //-- For every interface and its implementation, we have to add the entry here
+      collection.AddScoped<ICountrySearchReader, CountrySearchReader>();
 
     }
   }
